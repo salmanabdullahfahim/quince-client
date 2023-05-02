@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import ChefCard from '../ChefCard/ChefCard';
 import Stats from '../Stats/Stats';
+import Feedback from '../Feedback/Feedback';
 
 const Home = () => {
 
@@ -66,6 +67,13 @@ const Home = () => {
 
             <div>
                 <Stats></Stats>
+            </div>
+            
+            <div className='mt-6 mb-3'>
+                <h2 className='text-center text-4xl font-semibold'>Client Feedback</h2>
+            </div>
+            <div className='px-8 shadow-xl rounded mx-8 mb-12'>
+                <Feedback></Feedback>
             </div>
         </div>
     );

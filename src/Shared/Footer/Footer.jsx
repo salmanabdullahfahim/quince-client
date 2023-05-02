@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="container mx-auto px-10 md:px-0 py-6 rounded shadow-xl bg-black">
+        <footer className="container mx-auto px-10 md:px-6 py-6 rounded shadow-xl bg-black">
             <div className="flex items-center space-x-6">
                 <div>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" className="w-10 h-10" fill="#FF5733" viewBox="0, 0, 430, 540">
