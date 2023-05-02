@@ -14,7 +14,7 @@ const Login = () => {
                                 <Link to='/register'
                                     href="#"
                                     title=""
-                                    className="font-medium text-indigo-600 transition-all duration-200 hover:text-indigo-700 hover:underline focus:text-indigo-700"
+                                    className="font-medium text-orange-600 transition-all duration-200 hover:text-orange-700 hover:underline focus:text-orange-700"
                                 >
                                     Create a free account
                                 </Link>
@@ -46,7 +46,7 @@ const Login = () => {
                                             <Link 
                                                 href="#"
                                                 title=""
-                                                className="text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline focus:text-indigo-700"
+                                                className="text-sm font-medium text-orange-600 hover:text-orange-700 hover:underline focus:text-orange-700"
                                             >
                                                 {' '}
                                                 Forgot password?{' '}
