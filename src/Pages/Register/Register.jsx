@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
+    const { createUser } = useContext(AuthContext);
+
+    const handleRegister = (event) => {
+
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+
+        createUser(email, password)
+            .then(result => {
+                const createdUser = result.user;
+                console.log(createdUser);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+
+    }
     return (
         <div className="relative">
             <div className="my-4 flex items-center justify-center">
@@ -20,7 +42,7 @@ const Register = () => {
                                 </Link>
                             </p>
 
-                            <form className="mt-8">
+                            <form onSubmit={handleRegister} className="mt-8">
                                 <div className="space-y-5">
                                     <div>
                                         <label htmlFor="name" className="text-base font-medium text-gray-900">
