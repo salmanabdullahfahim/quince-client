@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import ChefCard from '../ChefCard/ChefCard';
+import Stats from '../Stats/Stats';
 
 const Home = () => {
 
@@ -61,6 +62,10 @@ const Home = () => {
                 {
                     chefs.map(chef => <ChefCard key={chef.id} chef={chef}></ChefCard>)
                 }
+            </div>
+
+            <div>
+                <Stats></Stats>
             </div>
         </div>
     );
