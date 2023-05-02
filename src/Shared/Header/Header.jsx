@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import quinceLogo from '../../../public/chefIcon.svg'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
+    const { user } = useContext(AuthContext);
     return (
         <div className='shadow-xl rounded-lg'>
             <nav className="relative px-4 py-4 flex justify-between items-center">
@@ -66,16 +68,22 @@ const Header = () => {
 
                 </ul>
                 <div className="space-x-2 hidden lg:block">
-                    <Link to='/login'>
-                        <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
-                            Login
-                        </button>
-                    </Link>
-                    <Link to='/register'>
-                        <button className="rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400 ">
-                            SignUp
-                        </button>
-                    </Link>
+                    {
+                        user ? <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
+                            Logout
+                        </button> : <Link to='/login'>
+                            <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
+                                Login
+                            </button>
+                        </Link>
+                    }
+                    {
+                        !user && <Link to='/register'>
+                            <button className="rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400 ">
+                                SignUp
+                            </button>
+                        </Link>
+                    }
                 </div>
             </nav>
         </div>
