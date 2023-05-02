@@ -1,10 +1,17 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import quinceLogo from '../../../public/chefIcon.svg'
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(error => {
+                console.error(error)
+            })
+    }
     return (
         <div className='shadow-xl rounded-lg'>
             <nav className="relative px-4 py-4 flex justify-between items-center">
@@ -69,7 +76,7 @@ const Header = () => {
                 </ul>
                 <div className="space-x-2 hidden lg:block">
                     {
-                        user ? <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
+                        user ? <button onClick={handleLogout} className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
                             Logout
                         </button> : <Link to='/login'>
                             <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
