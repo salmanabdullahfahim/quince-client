@@ -4,6 +4,8 @@ import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import Home from "../Home/Home/Home";
 import Recipes from "../Pages/Recipes/Recipes";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 
 
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
                 path: "/recipes/:id",
                 element: <Recipes></Recipes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }

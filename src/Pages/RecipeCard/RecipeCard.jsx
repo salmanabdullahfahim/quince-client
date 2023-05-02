@@ -35,7 +35,7 @@ const RecipeCard = ({ recipe }) => {
           {cookingMethod}
         </p>
         <div className="card-actions justify-end">
-          <button onClick={handleFavourite} disabled={isDisabled} className="btn btn-warning">Favourite</button>
+          <button onClick={handleFavourite} disabled={isDisabled} className="btn bg-orange-500 border-none hover:bg-orange-400">Favourite</button>
         </div>
       </div>
     </div>

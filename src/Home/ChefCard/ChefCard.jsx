@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ChefCard = ({ chef }) => {
@@ -25,7 +26,7 @@ const ChefCard = ({ chef }) => {
                         View Recipie
                     </button>
                 </Link>
-                <button className='border border-black border-1 p-1 rounded-xl text-sm'>Likes {likes}</button>
+                <button className='border border-black border-1 p-1 flex items-center gap-1 rounded-xl text-sm'> <FaThumbsUp></FaThumbsUp> {likes}</button>
             </div>
         </div>
 

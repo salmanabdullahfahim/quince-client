@@ -66,12 +66,16 @@ const Header = () => {
 
                 </ul>
                 <div className="space-x-2 hidden lg:block">
-                    <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
-                        Login
-                    </button>
-                    <button className="rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400 ">
-                        SignUp
-                    </button>
+                    <Link to='/login'>
+                        <button className="rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-orange-600 hover:bg-orange-400 ">
+                            Login
+                        </button>
+                    </Link>
+                    <Link>
+                        <button className="rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400 ">
+                            SignUp
+                        </button>
+                    </Link>
                 </div>
             </nav>
         </div>
