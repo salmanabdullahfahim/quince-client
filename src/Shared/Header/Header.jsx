@@ -4,7 +4,7 @@ import quinceLogo from '../../../public/chefIcon.svg'
 
 const Header = () => {
     return (
-        <div className='shadow-md rounded-lg'>
+        <div className='shadow-xl rounded-lg'>
             <nav className="relative px-4 py-4 flex justify-between items-center">
                 <div className='flex items-center gap-2'>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" className="w-10 h-10" fill="#FF5733" viewBox="0, 0, 430, 540">
