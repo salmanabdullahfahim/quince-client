@@ -4,6 +4,8 @@ import { useSpring, animated } from 'react-spring';
 import ChefCard from '../ChefCard/ChefCard';
 import Stats from '../Stats/Stats';
 import Feedback from '../Feedback/Feedback';
+import ReactTypingEffect from 'react-typing-effect';
+
 
 const Home = () => {
 
@@ -17,17 +19,17 @@ const Home = () => {
 
     return (
         <div>
-            <div className="relative isolate pl-6 lg:pl-8 bg-white flex h-screen overflow-hidden mb-12 mt-1 p-4">
+            <div className="relative isolate pl-6 lg:pl-8 bg-white flex h-screen gap-4 overflow-hidden mb-12 mt-1 p-4">
                 <div className="max-w-2xl py-32 sm:py-48 lg:py-32">
                     <div className="text-left">
-                        <animated.h1
-                            style={props}
-                            className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
-                        >
-                            Experience Culinary Excellence. Find Your Perfect Chef Today!
-                        </animated.h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Elevate Your Culinary Experience.Discover the Best Chefs. Find Your Perfect Chef Today.
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">
+                            <animated.span style={props}>
+                            Experience Culinary Excellence. 
+                                <ReactTypingEffect text="Find Your Perfect Chef !" speed={80} />
+                            </animated.span>
+                        </h1>
+                        <p className="mt-4 text-lg leading-8 text-gray-600">
+                            Elevate Your Culinary Experience. Find Your Perfect Chef Today.
                         </p>
                         <div className="mt-10 flex items-center gap-x-6">
                             <a
@@ -68,7 +70,7 @@ const Home = () => {
             <div>
                 <Stats></Stats>
             </div>
-            
+
             <div className='mt-6 mb-3'>
                 <h2 className='text-center text-4xl font-semibold'>Client Feedback</h2>
             </div>
