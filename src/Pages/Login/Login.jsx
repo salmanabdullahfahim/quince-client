@@ -3,7 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
-    const {signInUser, signInWithGoogle} = useContext(AuthContext);
+    const {signInUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
+
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -36,6 +37,17 @@ const Login = () => {
             .catch(error => {
                 console.log(error);
             })
+    }
+
+    const handleGithubSignIn = () =>{
+        signInWithGithub()
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
     return (
         <div className="relative">
@@ -139,7 +151,7 @@ const Login = () => {
                                     Sign in with Google
                                 </button>
 
-                                <button
+                                <button onClick={handleGithubSignIn}
                                     type="button"
                                     className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-500 bg-white px-4 py-4 text-base font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none dark:text-gray-400"
                                 >
