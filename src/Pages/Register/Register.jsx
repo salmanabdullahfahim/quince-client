@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser} = useContext(AuthContext);
 
     const handleRegister = (event) => {
 
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
 
@@ -18,11 +20,25 @@ const Register = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser);
+                updateUser(createdUser, name, photo);
             })
             .catch(error => {
                 console.error(error);
             })
 
+    }
+
+    const updateUser = (user, name, photo) =>{
+        updateProfile(user, {
+            displayName: name,
+            photoURL: photo
+        })
+        .then(() =>{
+
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
     }
     return (
         <div className="relative">
