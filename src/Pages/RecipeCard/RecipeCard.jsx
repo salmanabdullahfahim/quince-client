@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
-// import { Rating } from "@smastrom/react-rating";
+import { Rating } from "@smastrom/react-rating";
 
-// import "@smastrom/react-rating/style.css";
+import "@smastrom/react-rating/style.css";
 
 const RecipeCard = ({ recipe }) => {
     const [isDisabled, setIsDisabled] = useState(false);
 
-    const { id, name, rating, ingredients, photo, cookingMethod } = recipe;
+    const { name, rating, ingredients, photo, cookingMethod } = recipe;
     const handleFavourite = () => {
         toast.success('Added to favourite!');
         setIsDisabled(true);
@@ -38,7 +38,9 @@ const RecipeCard = ({ recipe }) => {
                     {cookingMethod}
                 </p>
                 <div className="card-actions justify-end">
-                    {/* <div className="mr-auto flex items-center mt-5"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}</div> */}
+
+                    <div className="mr-auto flex items-center mt-5"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}</div>
+                    
                     <button onClick={handleFavourite} disabled={isDisabled} className="btn bg-orange-500 border-none hover:bg-orange-400">Favourite</button>
                 </div>
             </div>

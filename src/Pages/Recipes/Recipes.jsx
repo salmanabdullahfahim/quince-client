@@ -13,10 +13,10 @@ const Recipes = () => {
 
     return (
         <div>
-            <div className="w-8/12 mx-auto text-center">
-                <div className="w-64 h-64 rounded-full overflow-hidden mx-auto my-4">
+            <div className="w-8/12 mx-auto mt-6 text-center flex flex-col md:flex-row items-center bg-gray-100 rounded shadow-xl">
+                <div className="w-64 h-64 rounded-md overflow-hidden mx-auto my-4">
                     <img
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover "
                         src={chef?.chefPicture}
                         alt="chef image"
                     />
@@ -28,7 +28,7 @@ const Recipes = () => {
                     <p className="font-semibold">My Experience in this profession <span className="font-bold"> {chef?.yearsOfExperience}</span> years</p>
                 </div>
             </div>
-            <hr />
+            
             <div>
                 <h2 className="font-bold text-4xl text-center mt-10">My Recipes</h2>
                 {allRecipes.map((recipe) => (

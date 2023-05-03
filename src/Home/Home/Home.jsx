@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { useSpring, animated } from 'react-spring';
 import ChefCard from '../ChefCard/ChefCard';
 import Stats from '../Stats/Stats';
 import Feedback from '../Feedback/Feedback';
@@ -9,11 +8,6 @@ import ReactTypingEffect from 'react-typing-effect';
 
 const Home = () => {
 
-    const props = useSpring({
-        to: { opacity: 1, transform: 'translateY(0)' },
-        from: { opacity: 0, transform: 'translateY(-50px)' },
-        config: { duration: 1000 },
-    });
 
     const chefs = useLoaderData();
 
@@ -23,10 +17,10 @@ const Home = () => {
                 <div className="max-w-2xl py-32 sm:py-48 lg:py-32">
                     <div className="text-left">
                         <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">
-                            <animated.span style={props}>
+                           
                             Experience Culinary Excellence. 
                                 <ReactTypingEffect text="Find Your Perfect Chef !" speed={80} />
-                            </animated.span>
+                          
                         </h1>
                         <p className="mt-4 text-lg leading-8 text-gray-600">
                             Elevate Your Culinary Experience. Find Your Perfect Chef Today.
@@ -50,7 +44,7 @@ const Home = () => {
                 <div className="flex-1">
                     <img
                         className="max-h-full w-full object-cover rounded-lg"
-                        src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2hlZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+                        src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                         alt="image"
                     />
                 </div>
