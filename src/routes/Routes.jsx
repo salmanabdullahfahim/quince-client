@@ -19,7 +19,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/chef')
+                loader: () => fetch('https://quince-server-salmanabdullahfahim.vercel.app/chef')
 
             },
             {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: "/recipes/:id",
                 element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+                loader: ({ params }) => fetch(`https://quince-server-salmanabdullahfahim.vercel.app/recipes/${params.id}`)
             },
             {
                 path:'/login',

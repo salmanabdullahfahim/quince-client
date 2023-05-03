@@ -19,7 +19,7 @@ const Home = () => {
                         <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">
                            
                             Experience Culinary Excellence. 
-                                <ReactTypingEffect text="Find Your Perfect Chef !" speed={70} />
+                                <ReactTypingEffect text="Find Your Perfect Chef !" speed={80} />
                           
                         </h1>
                         <p className="mt-4 text-lg leading-8 text-gray-600">
