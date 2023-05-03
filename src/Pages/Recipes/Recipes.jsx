@@ -6,15 +6,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import RecipeCard from "../RecipeCard/RecipeCard";
 
 const Recipes = () => {
-    const [recipes, setRecipes] = useState([]);
 
     const chef = useLoaderData();
 
-    useEffect(() => {
-        fetch("http://localhost:5000/recipes/")
-            .then((res) => res.json())
-            .then((data) => setRecipes(data));
-    });
+    const allRecipes = chef.recipes;
 
     return (
         <div>
@@ -36,7 +31,7 @@ const Recipes = () => {
             <hr />
             <div>
                 <h2 className="font-bold text-4xl text-center mt-10">My Recipes</h2>
-                {recipes.map((recipe) => (
+                {allRecipes.map((recipe) => (
                     <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard>
                 ))}
             </div>
