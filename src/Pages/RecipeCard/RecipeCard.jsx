@@ -37,11 +37,11 @@ const RecipeCard = ({ recipe }) => {
                     <span className="text-xl font-bold">Cooking Method:</span>{" "}
                     {cookingMethod}
                 </p>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-end items-center">
 
                     <div className="mr-auto flex items-center mt-5"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}</div>
-                    
-                    <button onClick={handleFavourite} disabled={isDisabled} className="btn bg-orange-500 border-none hover:bg-orange-400">Favourite</button>
+
+                    <button onClick={handleFavourite} disabled={isDisabled} className=" rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400">Favourite</button>
                 </div>
             </div>
         </div>

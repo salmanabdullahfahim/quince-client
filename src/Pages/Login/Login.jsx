@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { toast } from "react-toastify";
 
 const Login = () => {
     const {signInUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
@@ -21,10 +22,12 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                toast.error('Login Successful')
                navigate(from, {replace: true})
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                toast.error(error.message);
             })
     }
 
