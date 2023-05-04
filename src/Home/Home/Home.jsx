@@ -7,6 +7,7 @@ import ReactTypingEffect from 'react-typing-effect';
 
 
 
+
 const Home = () => {
 
 
@@ -44,7 +45,7 @@ const Home = () => {
                 </div>
                 <div className="md:mt-8">
                     <img
-                        className="h-full w-full object-cover rounded-md md:ml-12"
+                        className="h-full w-full object-cover rounded-md md:ml-14"
                         src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=377&q=80"
                         alt="image"
                     />
