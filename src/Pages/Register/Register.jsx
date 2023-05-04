@@ -23,6 +23,10 @@ const Register = () => {
         const confirm = form.confirm.value;
         const password = form.password.value;
 
+        if(!email){
+            setError('You must give an email');
+        }
+
         // password validation
         if (!/(?=.*[A-Z])/.test(password)) {
             setError("Please add at least one uppercase in your password");

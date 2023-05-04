@@ -17,7 +17,7 @@ const Recipes = () => {
                 <div className="w-64 h-64 rounded-md overflow-hidden mx-auto my-4">
 
                     <img
-                        className="w-full h-full object-cover "
+                        className="w-full h-full object-cover"
                         src={chef?.chefPicture}
                         alt="chef image"
                     />

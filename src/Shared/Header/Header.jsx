@@ -74,11 +74,6 @@ const Header = () => {
                                     <button className="ml-5 rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400">Login</button>
                                 </Link>
                         }
-                        {
-                            !user && <Link to="/register">
-                                <button className="ml-5 rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400">Register</button>
-                            </Link>
-                        }
 
                     </>
 
