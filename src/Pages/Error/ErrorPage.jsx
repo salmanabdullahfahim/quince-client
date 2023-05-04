@@ -18,7 +18,7 @@ const ErrorPage = () => {
                     <Link to='/'>
                         <button className="inline-flex items-center rounded-md border border-orange-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-black hover:bg-orange-500 hover:text-white dark:text-white">
                             <FaArrowLeft className="w-4 h-4 mr-2" />
-                            Take me to back Homepage
+                            Take me back to Homepage
                         </button>
                     </Link>
 
