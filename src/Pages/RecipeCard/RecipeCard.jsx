@@ -20,7 +20,7 @@ const RecipeCard = ({ recipe }) => {
                     <img className="h-80 w-full object-cover" src={photo} alt="recipe" />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title text-2xl">{name}</h2>
+                    <h2 className="card-title text-3xl">{name}</h2>
                     
 
                     <div >
@@ -47,7 +47,7 @@ const RecipeCard = ({ recipe }) => {
                         <button
                             onClick={handleFavourite}
                             disabled={isDisabled}
-                            className="btn btn-primary"
+                            className=" btn border-none ml-2 rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400"
                         >
                             Favourite
                         </button>
