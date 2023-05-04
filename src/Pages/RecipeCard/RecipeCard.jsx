@@ -38,7 +38,7 @@ const RecipeCard = ({ recipe }) => {
                             )}
                         </div>
                         <p>
-                            <span className="text-xl font-bold">Cooking Methode:</span>
+                            <span className="text-xl font-bold">Cooking Method:</span>
                             {cookingMethod}
                         </p>
                     </div>
