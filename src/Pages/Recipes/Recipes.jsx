@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RecipeCard from "../RecipeCard/RecipeCard";
-import LazyLoad from "react-lazy-load";
+
 
 const Recipes = () => {
 
@@ -16,13 +14,13 @@ const Recipes = () => {
         <div>
             <div className="w-8/12 mx-auto mt-6 text-center flex flex-col md:flex-row items-center bg-gray-100 rounded shadow-xl">
                 <div className="w-64 h-64 rounded-md overflow-hidden mx-auto my-4">
-                    <LazyLoad>
+                  
                         <img
                             className="w-full h-full object-cover "
                             src={chef?.chefPicture}
                             alt="chef image"
                         />
-                    </LazyLoad>
+                    
                 </div>
                 <div className="w-6/12 mx-auto mb-10">
                     <h2 className="text-5xl my-9 font-bold">{chef?.chefName}</h2>

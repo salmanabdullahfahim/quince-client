@@ -5,7 +5,7 @@ import { updateProfile } from 'firebase/auth';
 import { toast } from "react-toastify";
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, logOut} = useContext(AuthContext);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
@@ -53,6 +53,11 @@ const Register = () => {
                 event.target.reset();
                 setSuccess("User has created successfully");
                 toast.success("User has created successfully!");
+                logOut()
+                .then()
+                .catch(error => {
+                    console.error(error)
+                })
             })
             .catch(error => {
                 toast.error(error.message);
@@ -118,7 +123,7 @@ const Register = () => {
                                                 className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                                                 type="text"
                                                 placeholder="Enter Your Photo Url"
-                                                id="photo" name='photo' required
+                                                id="photo" name='photo'
                                             ></input>
                                         </div>
                                     </div>
@@ -188,6 +193,10 @@ const Register = () => {
                                                 />
                                             </svg>
                                         </button>
+                                        <div className="text-center my-5">
+                                            <p className="text-red-700">{error}</p>
+                                            <p className="text-green-700">{success}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </form>

@@ -6,6 +6,7 @@ import Feedback from '../Feedback/Feedback';
 import ReactTypingEffect from 'react-typing-effect';
 
 
+
 const Home = () => {
 
 
@@ -13,8 +14,8 @@ const Home = () => {
 
     return (
         <div>
-            <div className="relative isolate pl-6 lg:pl-8 bg-white flex h-screen gap-4 overflow-hidden mb-12 mt-1 p-4">
-                <div className="max-w-2xl py-32 sm:py-48 lg:py-32">
+            <div className="relative isolate pl-6 lg:pl-8 bg-white flex flex-col lg:flex-row h-screen gap-4 overflow-hidden mb-12 mt-1 p-4">
+                <div className="max-w-2xl  py-10 lg:py-32 flex-1">
                     <div className="text-left">
                         <h1 className="text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">
                            
@@ -28,7 +29,7 @@ const Home = () => {
                         <div className="mt-10 flex items-center gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white"
+                                className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white mb-4 lg:mb-0"
                             >
                                 Hire a Chef Today
                             </a>
@@ -41,10 +42,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1">
+                <div className="md:mt-8">
                     <img
-                        className="max-h-full w-full object-cover rounded-lg"
-                        src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        className="h-full w-full object-cover rounded-md md:ml-12"
+                        src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=377&q=80"
                         alt="image"
                     />
                 </div>
