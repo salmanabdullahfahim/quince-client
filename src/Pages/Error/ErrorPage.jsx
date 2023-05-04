@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import errorImage from '../../../public/not_found.svg';
 
 const ErrorPage = () => {
     return (
         <div className="py-10">
             <div className="text-center">
-                <p className="text-base font-semibold text-orange-600">404</p>
+                <img src={errorImage} alt="" className='w-80 mx-auto' />
                 <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl">
                     Page not found
                 </h1>

@@ -20,7 +20,7 @@ const Feedback = () => {
                                 </p>
                             </blockquote>
                             <p className="text-lg font-semibold text-black dark:text-white mt-7">
-                                John Doe
+                            Kerem
                             </p>
                             <p className="mt-1 text-base text-gray-600">
                                 Founder, Silver Spoon
@@ -44,7 +44,8 @@ const Feedback = () => {
                                 </p>
                             </blockquote>
                             <p className="text-lg font-semibold text-black dark:text-white mt-7">
-                                Ketty Perry
+
+                                Betül Özkaynak
                             </p>
                             <p className="mt-1 text-base text-gray-600">
                                 Owner, Rannaghor

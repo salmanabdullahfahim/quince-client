@@ -41,7 +41,7 @@ const RecipeCard = ({ recipe }) => {
 
                     <div className="mr-auto flex items-center mt-5"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /> {rating}</div>
 
-                    <button onClick={handleFavourite} disabled={isDisabled} className=" rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400">Favourite</button>
+                    <button onClick={handleFavourite} disabled={isDisabled} className=" btn rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white border-none">Favourite</button>
                 </div>
             </div>
         </div>

@@ -5,13 +5,16 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ChefCard = ({ chef }) => {
+    
     const { id, chefName, chefPicture, yearsOfExperience, likes, numberOfRecipes } = chef;
 
     const [blurDuration, setBlurDuration] = useState('100ms');
 
     useEffect(() => {
-        setBlurDuration('3000ms'); // change the duration to 1000ms
+        setBlurDuration('3000ms');
     }, []);
+
+
     return (
         <div
             className="rounded overflow-hidden shadow-lg dark:shadow-gray-800"

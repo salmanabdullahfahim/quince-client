@@ -67,7 +67,7 @@ const Header = () => {
                         {
                             user ?
                                 <>
-                                    {user.photoURL && <img className="h-12 rounded-full border border-4 border-gray-200  ml-5" src={user?.photoURL} alt="" title={user?.displayName} />}
+                                    {user.photoURL && <img className="h-12 rounded-full border border-4 border-gray-200 cursor-pointer  ml-5" src={user?.photoURL} alt="" title={user?.displayName} />}
                                     <button onClick={handleLogout} className="ml-5 rounded-md bg-orange-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-orange-400">Logout</button>
                                 </>
                                 : <Link to="/login">

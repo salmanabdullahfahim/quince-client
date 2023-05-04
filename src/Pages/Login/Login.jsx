@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from "react-toastify";
 
 const Login = () => {
-    const {signInUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
+    const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+    const [error, setError] = useState("");
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -12,7 +13,10 @@ const Login = () => {
     const from = location.state?.from.pathname || '/'
 
     const handleLogin = (event) => {
+
         event.preventDefault();
+
+        setError("");
 
         const form = event.target;
         const email = form.email.value;
@@ -23,11 +27,12 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 toast.success('Login Successful')
-               navigate(from, {replace: true})
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.error(error);
                 toast.error(error.message);
+                setError(error.message);
             })
     }
 
@@ -36,7 +41,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-               navigate(from, {replace: true});
+                navigate(from, { replace: true });
 
             })
             .catch(error => {
@@ -44,17 +49,17 @@ const Login = () => {
             })
     }
 
-    const handleGithubSignIn = () =>{
+    const handleGithubSignIn = () => {
         signInWithGithub()
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            navigate(from, {replace: true});
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true });
 
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
     return (
         <div className="relative">
@@ -97,7 +102,7 @@ const Login = () => {
                                                 Password{' '}
                                             </label>
 
-                                            <Link 
+                                            <Link
                                                 href="#"
                                                 title=""
                                                 className="text-sm font-medium text-orange-600 hover:text-orange-700 hover:underline focus:text-orange-700"
@@ -136,6 +141,9 @@ const Login = () => {
                                                 />
                                             </svg>
                                         </button>
+                                    </div>
+                                    <div className="text-center my-3">
+                                        <p className="text-red-700">{error}</p>
                                     </div>
                                 </div>
                             </form>
